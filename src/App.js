@@ -2,17 +2,16 @@ import './App.css';
 import ChatBot from 'react-simple-chatbot';
 import { ThemeProvider } from 'styled-components';
 import DoctorAI from './component/DoctorAI_gpt3';
-import language_parameters from './component/language_setting';
 import React, { useEffect, useRef } from "react";
 import "./Alan.css";
 import alanBtn from "@alan-ai/alan-sdk-web";
 
-const target_language = process.env.REACT_APP_LANGUAGE
+
 const alan_api = process.env.REACT_APP_ALAN_API;
 //const target_language = "Chinese"
 //const target_language = "Japanese"
 //const target_language = "English"
-const lang_p = language_parameters(target_language)
+const lang_p = "English"
 
 const ENABLE_THEME = true
 
@@ -34,7 +33,7 @@ const steps = [
   {
     id: 'bot-welcome',
     //message: 'Welcome to Doctor AI, how can I help?',
-    message: lang_p["greeting"],
+    message: "Good day!",
     trigger: 'user'
   },
   {
