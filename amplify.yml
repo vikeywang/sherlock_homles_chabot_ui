@@ -3,13 +3,11 @@ frontend:
   phases:
     preBuild:
       commands:
-        - npm install
+        - npm install --legacy-peer-deps
     build:
       commands:
-        - echo "REACT_APP_NEO4JPASSWORD=$REACT_APP_NEO4JPASSWORD" >> .env
-        - echo "REACT_APP_NEO4JURI=$REACT_APP_NEO4JURI" >> .env
-        - echo "REACT_APP_NEO4JUSER=$REACT_APP_NEO4JUSER" >> .env
         - echo "REACT_APP_OPENAI_API_KEY=$REACT_APP_OPENAI_API_KEY" >> .env
+        - echo "REACT_APP_MODEL=$REACT_APP_MODEL" >> .env
         - npm run build
   artifacts:
     baseDirectory: build
