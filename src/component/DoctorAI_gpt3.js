@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Loading } from 'react-simple-chatbot';
 
-
 import Speech from 'speak-tts'
 
 const speech = new Speech()
