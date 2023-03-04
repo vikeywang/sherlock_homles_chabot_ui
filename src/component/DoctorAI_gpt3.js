@@ -47,7 +47,6 @@ class DoctorAI extends Component {
   }
 
   callDoctorAI() {
-
     const self = this;
     const { steps } = this.props;
     const search_raw = steps.user.value.trim();
