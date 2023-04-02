@@ -8,7 +8,7 @@ import "./Alan.css";
 import alanBtn from "@alan-ai/alan-sdk-web";
 
 
-const alan_api = "b70771382475d1df0fca2b0c9257c0252e956eca572e1d8b807a3e2338fdd0dc/stage";
+const alan_api = "";
 //const target_language = "Chinese"
 //const target_language = "Japanese"
 //const target_language = "English"
