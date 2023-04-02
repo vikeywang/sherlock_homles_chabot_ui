@@ -43,12 +43,25 @@ const steps = [
     // user: true,
     // trigger: 'bot-response'
     id: "search",
-    user: true,
-    placeholder: "Type your question here...",
-    trigger: "bot-response",
+    // user: true,
+    // placeholder: "Type your question here...",
+    // trigger: "bot-response",
+    options:[
+      {value: 1,label:"剧情", trigger:"bot-response1"},
+      {value: 2, label:"闲聊",trigger:"bot-response2"}
+    ],
   },
   {
-    id: 'bot-response',
+    id: 'bot-response1',
+    // component: <DoctorAI />,
+    component: <NeoVisComponent />,
+    waitAction: true,
+    asMessage: true,
+    // trigger: 'user'
+    trigger: "search"
+  },
+  {
+    id: 'bot-response2',
     // component: <DoctorAI />,
     component: <NeoVisComponent />,
     waitAction: true,

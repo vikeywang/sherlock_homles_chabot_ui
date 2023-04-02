@@ -11,15 +11,15 @@ require('dotenv').config()
 const reg = "#.*?#"
 const neo4j = require('neo4j-driver')
 
-const driver = neo4j.driver("neo4j+s://006f405e.databases.neo4j.io", neo4j.auth.basic("neo4j", "qaJEaC0V-P5C3Gam_Mc2yPKhZ6zq57_GQ1R8WqTblV8"));
+const driver = neo4j.driver("", neo4j.auth.basic("neo4j", ""));
 const session = driver.session()
 
 
 const { Configuration, OpenAIApi } = require("openai");
-let gpt_model = "davinci:ft-thesis:holmes-2023-03-03-04-56-36";
+let gpt_model = "";
 // let gpt_model = "gpt-3.5-turbo";
 const configuration = new Configuration({
-  apiKey: "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"
+  apiKey: ""
 });
 const openai = new OpenAIApi(configuration);
 
